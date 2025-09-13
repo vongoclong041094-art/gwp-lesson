@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Warming Potential (GWP) - EPA 608 Study Guide</title>
+    <meta name="description" content="Learn about Global Warming Potential (GWP) for EPA 608 certification. Understand refrigerant GWP values, environmental impact, and exam strategies.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            border-radius: 10px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .website-link {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .website-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #4CAF50;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3 {
+            color: #34495e;
+            font-size: 1.4rem;
+            margin: 20px 0 15px 0;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .definition-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2196F3;
+            margin: 20px 0;
+        }
+
+        .definition-box strong {
+            color: #1976D2;
+            font-size: 1.1rem;
+        }
+
+        .refrigerant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .refrigerant-card {
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .refrigerant-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .cfc-card { background: linear-gradient(135deg, #ffebee, #ffcdd2); border-color: #f44336; }
+        .hcfc-card { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border-color: #ff9800; }
+        .hfc-card { background: linear-gradient(135deg, #fff8e1, #ffecb3); border-color: #ffc107; }
+        .hfo-card { background: linear-gradient(135deg, #e8f5e8, #c8e6c9); border-color: #4caf50; }
+
+        .refrigerant-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .gwp-value {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 8px 0;
+        }
+
+        .exam-tip {
+            background: linear-gradient(135deg, #fff9c4, #f9f9c4);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .exam-tip .emoji {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .comparison-table th {
+            background: #34495e;
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .quiz-section {
+            background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #03a9f4;
+        }
+
+        .quiz-question {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .quiz-question h4 {
+            color: #1976d2;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .quiz-options {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .quiz-options li {
+            padding: 8px 0;
+            margin: 5px 0;
+            padding-left: 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .quiz-options li:hover {
+            background: #f0f0f0;
+        }
+
+        .answer {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-left: 4px solid #4caf50;
+        }
+
+        .memory-hack {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #e91e63;
+            margin: 20px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffd54f 0%, #ffd54f 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0 88%;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .refrigerant-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Global Warming Potential (GWP)</h1>
+            <p class="subtitle">Essential Knowledge for EPA 608 Certification Success</p>
+            <a href="https://epa608practicetest.net" class="website-link">🎯 Practice Tests Available</a>
+        </div>
+
+        <div class="section">
+            <h2>🌡️ 2.1 What Is Global Warming Potential?</h2>
+
+            <div class="definition-box">
+                <strong>Definition:</strong> A measure of how much heat a gas traps in the atmosphere compared to carbon dioxide (CO₂).
+            </div>
+
+            <h3>Key Concepts:</h3>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li><strong>Baseline:</strong> CO₂ is the reference = <span class="highlight">GWP of 1</span></li>
+                <li><strong>Higher GWP</strong> = traps more heat per molecule</li>
+                <li><strong>Important because</strong> many refrigerants are powerful greenhouse gases, even if they don't harm the ozone layer</li>
+            </ul>
+
+            <div class="exam-tip">
+                <span class="emoji">👉</span>
+                <strong>Exam Keyword:</strong> If the question asks, "What gas is the baseline for GWP?" → <strong>CO₂</strong>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 2.2 GWP Values of Refrigerants</h2>
+
+            <div class="refrigerant-grid">
+                <div class="refrigerant-card cfc-card">
+                    <h4>CFCs (Chlorofluorocarbons)</h4>
+                    <p>Very high GWP + destroy ozone</p>
+                    <div class="gwp-value">Example: CFC-12 (R-12) ≈ 10,900</div>
+                    <p><small>⚠️ Highest environmental impact</small></p>
+                </div>
+
+                <div class="refrigerant-card hcfc-card">
+                    <h4>HCFCs (Hydrochlorofluorocarbons)</h4>
+                    <p>Still high GWP + ozone damage</p>
+                    <div class="gwp-value">Example: HCFC-22 (R-22) ≈ 1,810</div>
+                    <p><small>⚠️ Being phased out</small></p>
+                </div>
+
+                <div class="refrigerant-card hfc-card">
+                    <h4>HFCs (Hydrofluorocarbons)</h4>
+                    <p>Zero ODP (no chlorine) but high GWP</p>
+                    <div class="gwp-value">Example: HFC-134a (R-134a) ≈ 1,430</div>
+                    <p><small>🔄 Transitional refrigerants</small></p>
+                </div>
+
+                <div class="refrigerant-card hfo-card">
+                    <h4>HFOs (Hydrofluoroolefins)</h4>
+                    <p>Zero ODP, very low GWP</p>
+                    <div class="gwp-value">Example: R-1234yf ≈ 4</div>
+                    <p><small>✅ Future-friendly refrigerants</small></p>
+                </div>
+            </div>
+
+            <h3>Natural Refrigerants:</h3>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li><strong>R-600a (isobutane), R-290 (propane), CO₂:</strong> Ultra-low GWP values (close to 1)</li>
+                <li>Some are flammable, but environmentally safer</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🎯 2.3 Why GWP Matters in EPA 608</h2>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Past Focus</th>
+                    <th>Today's Focus</th>
+                </tr>
+                <tr>
+                    <td>Ozone protection</td>
+                    <td>Climate change prevention</td>
+                </tr>
+                <tr>
+                    <td>ODP values</td>
+                    <td>GWP values</td>
+                </tr>
+                <tr>
+                    <td>CFC/HCFC phase-out</td>
+                    <td>High-GWP HFC phase-down</td>
+                </tr>
+            </table>
+
+            <p style="margin-top: 20px;">Even refrigerants with <strong>ODP = 0</strong> may still have <strong>high GWP</strong>. This is why regulators are:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Phasing out high-GWP HFCs</li>
+                <li>Introducing HFOs and natural refrigerants</li>
+            </ul>
+
+            <div class="exam-tip">
+                <span class="emoji">📚</span>
+                <strong>EPA 608 tests you on this</strong> because techs must know the environmental tradeoffs when working with different refrigerants.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⚖️ 2.4 GWP vs. ODP (Don't Confuse Them!)</h2>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Property</th>
+                    <th>ODP (Ozone Depletion Potential)</th>
+                    <th>GWP (Global Warming Potential)</th>
+                </tr>
+                <tr>
+                    <td><strong>Measures</strong></td>
+                    <td>Harm to ozone layer</td>
+                    <td>Heat-trapping effect</td>
+                </tr>
+                <tr>
+                    <td><strong>Reference</strong></td>
+                    <td>CFC-11 = 1</td>
+                    <td>CO₂ = 1</td>
+                </tr>
+                <tr>
+                    <td><strong>Focus</strong></td>
+                    <td>Stratospheric ozone</td>
+                    <td>Climate warming</td>
+                </tr>
+            </table>
+
+            <h3>Examples:</h3>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li><strong>R-22 (HCFC):</strong> ODP ≠ 0, GWP high</li>
+                <li><strong>R-134a (HFC):</strong> ODP = 0, GWP high</li>
+                <li><strong>R-1234yf (HFO):</strong> ODP = 0, GWP very low</li>
+            </ul>
+
+            <div class="exam-tip">
+                <span class="emoji">⚠️</span>
+                <strong>Exam Trap:</strong> If they ask about ozone damage → <strong>ODP</strong>. If they ask about climate warming → <strong>GWP</strong>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 2.5 Regulations Around GWP</h2>
+
+            <h3>Key Regulations:</h3>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li><strong>Kigali Amendment (2016):</strong> Global plan to phase down HFCs</li>
+                <li><strong>U.S. EPA SNAP Program:</strong> Regulates acceptable refrigerants based on both ODP & GWP</li>
+                <li><strong>Technician responsibility:</strong> Choose refrigerants that meet environmental standards and handle high-GWP gases carefully (no venting)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🧠 2.6 Memory Hacks</h2>
+
+            <div class="memory-hack">
+                <ul style="list-style: none;">
+                    <li>💡 <strong>"CO₂ = 1 → everything else compared to it"</strong></li>
+                    <li>💡 <strong>"CFCs = Catastrophic (Ozone + Warming)"</strong></li>
+                    <li>💡 <strong>"HFCs = Harsh on climate"</strong></li>
+                    <li>💡 <strong>"HFOs = Hope for the Future"</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section quiz-section">
+            <h2>🧪 2.7 Mini-Quiz (EPA 608 Core Style)</h2>
+
+            <div class="quiz-question">
+                <h4>Q1. What gas is used as the baseline for GWP?</h4>
+                <ul class="quiz-options">
+                    <li>A) R-12</li>
+                    <li>B) CO₂</li>
+                    <li>C) Ammonia</li>
+                    <li>D) Propane</li>
+                </ul>
+                <div class="answer">✅ <strong>Answer: B (CO₂)</strong></div>
+            </div>
+
+            <div class="quiz-question">
+                <h4>Q2. Which refrigerant type generally has the lowest GWP?</h4>
+                <ul class="quiz-options">
+                    <li>A) CFCs</li>
+                    <li>B) HCFCs</li>
+                    <li>C) HFCs</li>
+                    <li>D) HFOs</li>
+                </ul>
+                <div class="answer">✅ <strong>Answer: D (HFOs)</strong></div>
+            </div>
+
+            <div class="quiz-question">
+                <h4>Q3. Which refrigerant has ODP = 0 but high GWP?</h4>
+                <ul class="quiz-options">
+                    <li>A) R-134a</li>
+                    <li>B) R-22</li>
+                    <li>C) R-600a</li>
+                    <li>D) R-1234yf</li>
+                </ul>
+                <div class="answer">✅ <strong>Answer: A (R-134a)</strong></div>
+            </div>
+
+            <div class="quiz-question">
+                <h4>Q4. If a refrigerant has GWP = 1, which gas is it?</h4>
+                <div class="answer">✅ <strong>Answer: Carbon dioxide (CO₂)</strong></div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="http://epa608practicetest.net/core.html" class="back-link">📚 Continue with Core Practice Tests</a>
+        </div>
+    </div>
+</body>
+</html>
